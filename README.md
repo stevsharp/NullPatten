@@ -16,3 +16,58 @@ To get started with NullPattern, clone the repository and build the project usin
 git clone https://github.com/stevsharp/NullPattern.git
 cd NullPattern
 dotnet build
+
+## Example
+Here is a basic example demonstrating the Null Object Pattern:
+
+public interface ICustomer
+{
+    string GetName();
+}
+
+public class RealCustomer : ICustomer
+{
+    private string _name;
+
+    public RealCustomer(string name)
+    {
+        _name = name;
+    }
+
+    public string GetName()
+    {
+        return _name;
+    }
+}
+
+public class NullCustomer : ICustomer
+{
+    public string GetName()
+    {
+        return "Not Available";
+    }
+}
+
+public class CustomerFactory
+{
+    public static ICustomer GetCustomer(string name)
+    {
+        if (string.IsNullOrEmpty(name))
+        {
+            return new NullCustomer();
+        }
+        return new RealCustomer(name);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ICustomer customer1 = CustomerFactory.GetCustomer("John Doe");
+        ICustomer customer2 = CustomerFactory.GetCustomer(null);
+
+        Console.WriteLine("Customer 1: " + customer1.GetName());
+        Console.WriteLine("Customer 2: " + customer2.GetName());
+    }
+}
