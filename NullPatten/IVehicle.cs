@@ -1,0 +1,4 @@
+﻿interface IVehicle
+{
+    void Travel();
+}
