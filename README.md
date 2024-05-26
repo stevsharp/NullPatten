@@ -1,4 +1,4 @@
-# NullPattern
+# Null Pattern
 
 Null Pattern is a C# implementation demonstrating the Null Object Design Pattern. This pattern helps in dealing with null references by providing a default object instead of using null references. This can prevent null reference exceptions and make the code more readable and maintainable.
 
