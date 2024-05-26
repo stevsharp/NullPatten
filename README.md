@@ -71,3 +71,17 @@ class Program
         Console.WriteLine("Customer 2: " + customer2.GetName());
     }
 }
+
+## Contributing
+Contributions are welcome! To contribute, please follow these steps:
+
+Fork the repository.
+Create your feature branch (git checkout -b feature/NewFeature).
+Commit your changes (git commit -am 'Add new feature').
+Push to the branch (git push origin feature/NewFeature).
+Create a new Pull Request.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+If you have any questions or suggestions, feel free to open an issue or contact the project maintainer at stevsharp@example.com.
